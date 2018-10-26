@@ -1,1 +1,1 @@
-Paperclip::Attachment.default_options[:s3_host_name] = 'assmnt.s3.amazonaws.com'
+Paperclip::Attachment.default_options[:s3_host_name] = 'assment.s3.amazonaws.com'
