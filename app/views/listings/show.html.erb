@@ -1,5 +1,9 @@
 <p id="notice"><%= notice %></p>
 
+<%= image_tag @listing.listing_image.url(:web, :preview) %>
+<%= image_tag @listing.listing_image.url(:print, :full) %>
+<%= image_tag @listing.listing_image.url(:web, :thumb) %>
+
 <p>
   <strong>Name:</strong>
   <%= @listing.name %>

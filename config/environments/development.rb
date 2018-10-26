@@ -58,4 +58,16 @@ Rails.application.configure do
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+  # config/initializers/carrierwave.rb
+
+  CarrierWave.configure do |config|
+    config.fog_credentials = {
+      :provider              => 'AWS',
+      :aws_access_key_id     => ENV['S3_KEY'],
+      :aws_secret_access_key => ENV['S3_SECRET']
+    }
+
+    config.fog_directory =  ENV['S3_BUCKET_NAME']
+    config.cache_dir     = "#{Rails.root}/tmp/uploads"   # For Heroku
+  end
 end

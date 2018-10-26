@@ -12,7 +12,10 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bcrypt', '~> 3.1', '>= 3.1.12'
-
+gem 'carrierwave', '~> 0.11.2'
+gem 'fog', '~> 1.38'
+gem "fog-aws"
+gem 'aws-sdk', '~> 3.0', '>= 3.0.1'
 group :production do
   gem 'pg'
   gem 'rails_12factor', '~> 0.0.3'
