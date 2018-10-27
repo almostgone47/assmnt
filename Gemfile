@@ -15,6 +15,7 @@ gem 'bcrypt', '~> 3.1', '>= 3.1.12'
 gem "paperclip", "~> 6.0.0"
 gem 'aws-sdk', '~> 3.0', '>= 3.0.1'
 gem 'rmagick', '~> 2.15', '>= 2.15.4'
+gem "mini_magick"
 
 group :production do
   gem 'pg'
