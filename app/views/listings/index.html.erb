@@ -1,10 +1,19 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listings</h1>
-
+<div class="jumbotron">
+  <h1 class="display-4">Assessment</h1>
+  <p class="lead">Checkout all kinds of stuff on this website and assess it!</p>
+  <hr class="my-4">
+  <p>If you can't find anything to assess, go ahead and add something for your assessment needs.</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="/pages/about" role="button">Learn more</a>
+  </p>
+</div>
+<div class="main">
 <table class="table table-hover table-condensed">
   <thead>
     <tr>
+      <th>Assmnt?</th>
       <th>Name</th>
       <th>Address</th>
       <th>Phone</th>
@@ -17,6 +26,11 @@
   <tbody>
     <% @listings.each do |listing| %>
       <tr>
+        <td>
+          <%= link_to listing.image.url do %>
+            <%= image_tag listing.image.url, class: "thumbnail" %>
+          <% end %>
+        </td>
         <td><%= listing.name %></td>
         <td><%= listing.address %></td>
         <td><%= listing.phone %></td>
@@ -33,3 +47,4 @@
 <br>
 
 <%= link_to 'New Listing', new_listing_path, class: "btn btn-link" %>
+</div>
