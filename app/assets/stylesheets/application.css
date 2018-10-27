@@ -100,3 +100,21 @@ div {
 label {
   display: block;
 }
+
+.login-container{
+  margin:100px;
+}
+
+.log-item {
+  list-style-type: none;
+  padding:0 0 0 20px;
+}
+
+#search {
+  background-color: white;
+  color: #495057;
+}
+
+#search:hover {
+  background-color: #28a745;
+}
