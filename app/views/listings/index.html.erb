@@ -1,14 +1,5 @@
 <p id="notice"><%= notice %></p>
 
-<div class="jumbotron">
-  <h1 class="display-4">Assessment</h1>
-  <p class="lead">Checkout all kinds of stuff on this website and assess it!</p>
-  <hr class="my-4">
-  <p>If you can't find anything to assess, go ahead and add something for your assessment needs.</p>
-  <p class="lead">
-    <a class="btn btn-primary btn-lg" href="/pages/about" role="button">Learn more</a>
-  </p>
-</div>
 <div class="main">
 <table class="table table-hover table-condensed">
   <thead>
@@ -36,9 +27,7 @@
         <td><%= listing.phone %></td>
         <td><%= listing.email %></td>
         <td><%= listing.website %></td>
-        <td><%= link_to 'Show', listing, class: "btn btn-link" %></td>
-        <td><%= link_to 'Edit', edit_listing_path(listing), class: "btn btn-link" %></td>
-        <td><%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
+        <td><%= link_to 'Show', listing, class: "btn btn-link" %>
       </tr>
     <% end %>
   </tbody>
