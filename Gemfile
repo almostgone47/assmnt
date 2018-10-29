@@ -16,6 +16,7 @@ gem "paperclip", "~> 6.0.0"
 gem 'aws-sdk', '~> 3.0', '>= 3.0.1'
 gem 'rmagick', '~> 2.15', '>= 2.15.4'
 gem "mini_magick"
+gem 'pg_search'
 
 group :production do
   gem 'pg'

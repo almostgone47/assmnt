@@ -3,10 +3,8 @@ class ListingsController < ApplicationController
   before_action :authorize
   before_action :check_user, only: [:edit, :update, :desroy]
 
-  # GET /listings
-  # GET /listings.json
   def index
-    @listings = Listing.all
+    @listings = Listing.search(params[:search])
   end
 
   # GET /listings/1
