@@ -13,4 +13,8 @@ class Listing < ApplicationRecord
     end
   end
 
+  def locations
+  	@locations = Listing.address
+  end
+
 end

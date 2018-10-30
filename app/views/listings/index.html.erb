@@ -27,6 +27,10 @@
             <td><%= listing.phone %></td>
             <td><%= listing.email %></td>
             <td><%= listing.website %></td>
+            <% if (listing.user_id == current_user) || current_user.admin?  %>
+              <td><%= link_to 'Edit', edit_listing_path(listing), class: "btn btn-link" %></td>
+              <td><%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?', remote: true }, class: "delete btn btn-danger" %></td>    
+            <% end %>
             <td><%= link_to 'Show', listing, class: "btn btn-link" %></td>
           </tr>
         <% end %>
@@ -38,8 +42,12 @@
       width="100%"
       height="555"
       frameborder="0" style="border:0"
-      src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCPvyYbPw07qiiHNJs0JCOr4GLZDu-6ToE
-        &q=Space+Needle,Seattle+WA" allowfullscreen>
+      src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCPvyYbPw07qiiHNJs0JCOr4GLZDu-6ToE&zoom=3
+        &q=(<% @listings.each do |listing| %>
+            <%= listing.address %>
+            <% end %>
+            )" allowfullscreen>
+            
     </iframe>
   </div>
 </div>

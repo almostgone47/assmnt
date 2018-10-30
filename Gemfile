@@ -17,6 +17,9 @@ gem 'aws-sdk', '~> 3.0', '>= 3.0.1'
 gem 'rmagick', '~> 2.15', '>= 2.15.4'
 gem "mini_magick"
 gem 'pg_search'
+gem 'jquery-ui-rails', '~> 5.0', '>= 5.0.5'
+gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
+gem 'popper_js', '~> 1.9', '>= 1.9.9'
 
 group :production do
   gem 'pg'
